@@ -41,6 +41,20 @@
 
         console.log(Web.teks)
         Web.render()
+
+        //short circuit-evaluation
+        const user = {
+            nama: 'Arif',
+            umur: 25
+        }
+        console.log(user.pekerjaan || 'Pengangguran') // Pengangguran
+
+        const user2 = {
+            nama: 'Budi',
+            umur: 27,
+            pekerjaan: 'Programmer'
+        }
+        console.log(user2.pekerjaan || 'Pengangguran') // Programmer
     </script>
 </body>
 
