@@ -55,6 +55,10 @@
             pekerjaan: 'Programmer'
         }
         console.log(user2.pekerjaan || 'Pengangguran') // Programmer
+        //optional Chaining
+        const user3 = null
+        console.log(user3?.['name']) // undefined
+        console.log(user3?.['addrees']?.['city']) // undefined
     </script>
 </body>
 
