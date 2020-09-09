@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //masalah
+        const Web = {
+            teks: 'hello',
+            render: function () {
+                setTimeout(function () {
+                    console.log('menampilkan: ' + this.teks)
+                }, 1000)
+            }
+        }
+
+        //solusi
+        const Web = {
+            teks: 'hello',
+            render: function () {
+                setTimeout(() => {
+                    console.log('menampilkan: ' + this.teks)
+                }, 1000)
+            }
+        }
+
+        //masalah lain pake arrow
+        const Web = {
+            teks: 'hello',
+            render: () => {  // kita ubah jadi format arrow function
+                setTimeout(() => {
+                    console.log('menampilkan: ' + this.teks)
+                }, 1000)
+            }
+        }
+
+        console.log(Web.teks)
+        Web.render()
+    </script>
+</body>
+
+</html>
